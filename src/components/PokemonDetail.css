@@ -1,0 +1,4 @@
+.pokemon{
+    display: flex;
+    border: 10px solid black;
+}
