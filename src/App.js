@@ -1,7 +1,8 @@
-import './App.css';
+import './style.css';
 import PokemonContainer from './containers/PokemonContainer';
 
 function App() {
+
   return (
     <div className="App">
     <PokemonContainer/>

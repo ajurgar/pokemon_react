@@ -1,6 +1,17 @@
-.container{
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    background-color: aquamarine;
+.nav{
+    padding: 20px;
+    background: aquamarine;
+    color: aliceblue;
+    text-align: center;
 }
+
+.App{
+    background: aquamarine;
+
+}
+
+.img{
+    text-align: center;
+}
+
+

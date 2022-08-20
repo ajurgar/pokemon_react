@@ -1,4 +1,5 @@
 import React from "react";
+import './PokemonSelector.css'
 
 const PokemonSelector = ({ pokemons, onPokemonSelected }) => {
 
