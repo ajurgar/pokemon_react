@@ -13,5 +13,26 @@
 .img{
     text-align: center;
 }
+.grid-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    border-radius: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 20px;
+    background: #f7f7f7;
+    height: 500px;
+}
 
+.grid-container img{
+    margin-top: 15px;
+    height: 480px;
+}
+
+
+img{
+    margin-top: 40px;
+}
 
