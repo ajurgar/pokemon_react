@@ -4,5 +4,7 @@
     font-weight: 900;
     padding: 10px;
     border-radius: 10px;
+    text-transform: capitalize;
+    text-align: center;
     
 }

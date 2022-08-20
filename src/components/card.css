@@ -7,4 +7,11 @@
 
 .poke_name h2{
     align-items: center;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.Card_type{
+    text-align: center;
+    font-weight: 900;
 }

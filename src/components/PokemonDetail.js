@@ -15,9 +15,7 @@ const PokemonDetail = ({ pokemon }) => {
 
             <div className="poke_name">
                 <h2>{pokemon.name}</h2>
-            </div>
-
-            <div className="poke_type">
+                <div className="poke_type">
                 {   
                     pokemon.types.map(type => {
                         return (
@@ -29,6 +27,9 @@ const PokemonDetail = ({ pokemon }) => {
 
                 }
             </div>
+            </div>
+
+            
 
 
         </div>
