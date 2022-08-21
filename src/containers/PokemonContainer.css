@@ -1,12 +1,13 @@
 .nav{
     padding: 20px;
-    background: aquamarine;
-    color: aliceblue;
+    background: #ee5350;
+    color: black;
     text-align: center;
 }
 
 .App{
-    background: aquamarine;
+    background: #ee5350;
+    padding-bottom: 100px;
 
 }
 
@@ -15,20 +16,25 @@
 }
 .grid-container{
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
-    flex-wrap: wrap;
     border: 5px solid black;
     border-radius: 50px;
     margin-left: 400px;
     margin-right: 400px;
     margin-top: 20px;
-    background: #f7f7f7;
+    background: #dddd;
     height: 500px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+   
 }
 
 .grid-container img{
-    margin-top: 15px;
+    margin-top: 10px;
     height: 480px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 250px;
+    background: #f1e7e8;
 }
 
 

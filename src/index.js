@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Fonts/stylesheet.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+  <h1 className='footer'><span>DEX Eclipse 2.1:</span> The Most Advanced Pokedex in the Market!</h1>
   </React.StrictMode>
 );
 

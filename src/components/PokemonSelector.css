@@ -8,3 +8,8 @@
     text-align: center;
     
 }
+
+.selector:hover{
+    background: #3960a5;
+    color:white
+}
