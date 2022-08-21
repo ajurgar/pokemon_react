@@ -15,7 +15,7 @@ const PokemonSelector = ({ pokemons, onPokemonSelected }) => {
 
     return(
         <select className="selector" defaultValue="" onChange={handleChange}>
-        <option value=""> Choose a Pokemon</option>
+        <option value=""> Select Pokemon</option>
 
         {pokemonSelections}
 

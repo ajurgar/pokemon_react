@@ -30,12 +30,20 @@
    
 }
 
+
 .grid-container img{
     margin-top: 10px;
     height: 480px;
     
     background: #f7f7f7;
 }
+
+.grid-container img:hover{
+    background: #dddd;
+    border-radius: 400px;
+}
+
+
 
 
 img{
