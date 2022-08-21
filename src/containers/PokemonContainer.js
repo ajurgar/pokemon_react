@@ -10,7 +10,6 @@ const PokemonContainer = () => {
 
     const [pokemonData, setPokemonData] = useState([]);
     const [pokemonSelected, setPokemonSelected] = useState(null);
-    const [loading, setLoading] = useState(true)
     const initialUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=151"
     const navImage = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
     const pokedexImage = "https://www.kindpng.com/picc/m/541-5418191_original-pokedex-hd-png-download.png"
@@ -20,7 +19,6 @@ const PokemonContainer = () => {
         async function fecthData() {
             let response = await getAllPokemons(initialUrl);
             await loadingPokemon(response.results);
-            setLoading(false)
         };
         fecthData()
     }, [])
@@ -38,11 +36,6 @@ const PokemonContainer = () => {
 
         setPokemonData(_pokemon)
     }
-
-
-
-
-
 
 
     return (

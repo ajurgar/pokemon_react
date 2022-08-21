@@ -38,4 +38,10 @@
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     border-radius: 50px;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#ee5350,#feca1a,#ffca1a);
+    margin-bottom: 30px;
+    
 }
+

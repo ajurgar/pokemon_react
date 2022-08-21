@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-  <h1 className='footer'><span>DEX Eclipse 2.1:</span> The Most Advanced Pokedex in the Market!</h1>
+  <h1 className='footer'><span>DEX Eclipse 2.1</span><b>The Most Advanced Pokedex in the Market!</b> </h1>
   </React.StrictMode>
 );
 

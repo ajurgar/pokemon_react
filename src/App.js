@@ -1,4 +1,3 @@
-import './style.css';
 import PokemonContainer from './containers/PokemonContainer';
 
 function App() {
