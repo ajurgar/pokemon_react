@@ -2,41 +2,43 @@ import React, { useEffect, useState } from "react";
 import PokemonDetail from "../components/PokemonDetail";
 import PokemonSelector from "../components/PokemonSelector";
 import './PokemonContainer.css'
-import { getAllPokemons } from "../components/Services/fetchPokemon";
-import { getPokemon } from "../components/Services/fetchPokemon";
 
 
 const PokemonContainer = () => {
 
-    const [pokemonData, setPokemonData] = useState([]);
-    const [pokemonSelected, setPokemonSelected] = useState(null);
+    const [allPokemonData, setAllPokemonData] = useState([]);
+    const [selectedPokemonData, setSelectedPokemonData] = useState(null);
+    const [selectedPokemon, setSelectedPokemon] = useState(null);
+
     const initialUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=151"
     const navImage = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
     const pokedexImage = "https://www.kindpng.com/picc/m/541-5418191_original-pokedex-hd-png-download.png"
 
-
     useEffect(() => {
-        async function fecthData() {
-            let response = await getAllPokemons(initialUrl);
-            await loadingPokemon(response.results);
-        };
-        fecthData()
+        fetch(initialUrl)
+            .then(res => res.json())
+            .then(data => setAllPokemonData(data.results))
     }, [])
 
+
+    useEffect(() => {
+        if (selectedPokemon) {
+            const pokemonUrl = selectedPokemon.url
+            fetch(pokemonUrl)
+                .then(res => res.json())
+                .then(data => {
+                    setSelectedPokemonData(data)
+                });
+        }
+
+    }, [selectedPokemon]) 
+
+
+ 
+
     const onPokemonSelected = (pokemon) => {
-        setPokemonSelected(pokemon);
+        setSelectedPokemon(pokemon);
     }
-
-    const loadingPokemon = async (data) => {
-        let _pokemon = await Promise.all(data.map(async pokemon => {
-            let pokemonRecord = await getPokemon(pokemon.url);
-            return pokemonRecord
-
-        }))
-
-        setPokemonData(_pokemon)
-    }
-
 
     return (
         <>
@@ -46,15 +48,15 @@ const PokemonContainer = () => {
             </div>
 
             <nav className="nav">
-                <PokemonSelector pokemons={pokemonData} onPokemonSelected={onPokemonSelected} />
+                {allPokemonData ? <PokemonSelector pokemons={allPokemonData} onPokemonSelected={onPokemonSelected} /> : null}
             </nav>
 
             <div className="grid-container">
-                {pokemonSelected ? <PokemonDetail pokemon={pokemonSelected} /> : <img src={pokedexImage} alt="pokedex" className="pokedex"></img>
-}
-                
-
+                {selectedPokemonData ? <PokemonDetail pokemon={selectedPokemonData} /> : <img src={pokedexImage} alt="pokedex" className="pokedex"></img>
+                } 
             </div>
+            {/* why not selectedPokemon? */}
+
 
 
 

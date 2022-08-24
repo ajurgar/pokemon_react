@@ -3,14 +3,13 @@ import './card.css';
 import pokemonType from '../helpers/pokemonTypes'
 
 
-const PokemonDetail = ({ pokemon }) => {
-
+const PokemonDetail = ({ pokemon, index }) => {
 
 
     return (
         <>
 
-<div className="poke__img">
+<div className="poke__img" key={index}>
                 <img src={pokemon.sprites.front_default} />
             </div>
 
@@ -21,9 +20,9 @@ const PokemonDetail = ({ pokemon }) => {
                 </div>
                 <div className="poke_type">
                     {
-                        pokemon.types.map(type => {
+                        pokemon.types.map((type,index) => {
                             return (
-                                <div className="Card_type" style={{ backgroundColor: pokemonType[type.type.name]}}>
+                                <div className="Card_type" key={index} style={{ backgroundColor: pokemonType[type.type.name]}}>
                                     {type.type.name}
                                 </div>
                             )
